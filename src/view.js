@@ -8,6 +8,11 @@ class View {
     this.input = document.getElementById('add-input');
     this.todoList = document.getElementById('todo-list');
   }
+
+  // метод, принимающий объект задач
+  addItem(todo) {
+    
+  }
 }
 
 export default View;
