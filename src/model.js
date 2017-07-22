@@ -1,15 +1,16 @@
 // в данном случае моделью является простой массив
+// ничего не знает про View
 class Model {
   constructor(state = []) {
-    this.state = state;
+    this._state = state;
   }
 
   getItem(id) {
-    return this.state.find(item => item.id == id);
+    return this._state.find(item => item.id == id);
   }
 
   addItem(item) {
-    this.state.push(item);
+    this._state.push(item);
   }
 
   updateItem(id, data) {
@@ -20,7 +21,7 @@ class Model {
   removeItem(id) {
     const index = this.state.findIndex(item => item.id == id);
     if(index > -1) {
-      this.state.splice(index, 1);
+      this._state.splice(index, 1);
     }
   }
 }
